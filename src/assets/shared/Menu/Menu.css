@@ -1,158 +1,177 @@
-body,html{
-    font-family: 'Josefin Sans', sans-serif;
-  }
-  
-  section{
-    background:yellow;
-  }
-  .banner{
-    width:100%;
-    background:url('http://www.alstercloud.de/wp-content/uploads/2017/01/header.jpg') no-repeat;
-    background-size:cover;
-    background-position:center;
-    min-height:600px;
-    
-  }
-  .banner h3{
-    text-align:center;
-    margin-top: 200px;
-    color:#fff;
-    font-size:80px;
-    font-weight:700;
-    font-family: 'Josefin Sans', sans-serif;
-   }
-  .banner p{
-    text-align:center;
-    color:#fff;
-    font-size:1.3em;
-    opacity:1;
-    font-family: 'Josefin Sans', sans-serif;
-    
-  }
-  .opaque-navbar .container .navbar-header >a{
-    color:#fff;
-    text-transform:uppercase;
-    font-weight:bold;
-  }
-  .opaque-navbar .container .navbar-collapse >ul >li >a{
-    color:#fff;
-    text-transform:uppercase;
-    font-weight:700;
-  }
-  
-  .opaque-navbar{
-    background-color:rgba(0,0,0,0);
-    border-bottom:1px solid #eee;
-    
-    transition : background-color 0.5s ease 0s;
-  }
-  .opaque-navbar.opaque {
-      background-color:black ;
-      border:0px;    
-      transition: background-color .5s ease 0s;
-  }
-  
-  ul.dropdown-menu {
-      background-color: black;
-  }
-  .abt{
-    text-align:center;
-  }
-  .abt .jumbotron  {
-    background-color:#e67e22;
-  }
-  .abt h3{
-    
-    color:white;
-    font-size:40px; 
-    
-  }
-   hr{
-    width:100px;
-    border-width:3px;
-    
-  }
-  .abt p{
-    
-    color: rgba(255, 255, 255, 0.7);
-    font-size:20px;
-  }
-  .btn{
-    border:none;
-    border-radius:300px;
-    font-weight:bold;
-    text-transform:uppercase;
-    
-  }
-  .btn-default{
-    padding-bottom: 15px;
-    padding-top:15px;
-    padding-left:30px;
-    padding-right:30px;
-  }
-  
-  .no-padding{
-    padding:0;
-    margin-top:-30px;
-  }
-  
-   .col-6{
-    padding: 0 0;
-  }
-  
-  .no-padding h1{
-    padding-top:55px;
-    text-transform:uppercase;
-  }
-  .no-padding hr{
-    border: 2px solid #d0d0d0;
-  }
-  .bg-dark{
-    background-color:#222222;
-    color:white;
-  }
-  
-  .primary{
-    border:1px solid #d35400;
-  }
-  
-  .my-font{
-    font-size:20px;
-    
-  }
-  .bg-dark{
-    padding-top:55px;
-    padding-bottom:30px;
-  }
-  .padded{
-    padding-top:200px;
-  }
-  .padded .col-lg-4 a{
-   color:#d35400;
-    font-weight:bold;
-  }
-  
-  .list-icon{
-    list-style-type:none;
-    text-decoration:none;
+
+
+.container-nav{
+    font-size: 62.5%;
+}
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+
+.logo>img{
+    margin: 20px;
+   height: 6.25rem;
+width: 6.25rem;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #117964;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
     }
-  .list-icon li{
-    display:inline;
-    padding-right:20px;
-  }
-  .list-icon .fa{
-    font-size:40px;
-  }
-  @media (max-width: 992px) {
-    body
-    {
-      background:white;
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
     }
-    .opaque-navbar {
-      background-color: black;
-      height: 60px;
-      transition: background-color .5s ease 0s;
-  }
-  
-  }
-  
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
+}

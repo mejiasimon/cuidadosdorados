@@ -1,3 +1,11 @@
-.imagen {
-    width: 200px;
+.card {
+    width: 18rem;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+.row {
+    padding: 5em;
 }

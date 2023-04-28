@@ -18,7 +18,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
     width: 100%;
     height: 100px;
     color: #000;
@@ -36,7 +35,9 @@
 .menu-items{
     order: 2;
     display: flex;
+    color: black;
 }
+
 
 .logo>img{
     margin: 20px;

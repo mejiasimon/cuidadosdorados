@@ -33,6 +33,7 @@ wow.init()
                     <div className="texto">
                         <h3>Ejercicios Aerobicos</h3>
                         <p>Las personas mayores usualmente requieren alternativas para mantener su salud, por ello en el centro de cuidados dorados brindamos el servicio para realizar actividades físicas, las cuales se realizan al aire libre para brindar un espacio agradable a nuestros clientes</p>
+
                     </div>
                 </div>
             </div>
@@ -42,7 +43,7 @@ wow.init()
  </div>
 
 
-        
+      
         </>
     )
 }

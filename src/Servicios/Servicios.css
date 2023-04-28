@@ -1,3 +1,4 @@
+
 .card {
     width: 18rem;
 }
@@ -8,4 +9,27 @@
 
 .row {
     padding: 5em;
+    }
+    
+.imagen {
+    width: 200px;
+}
+#primera{
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+}
+#segunda{
+    --animate-duration: 2s;
+    --animate-delay: 5s;
+}
+#tercera{
+    --animate-duration: 3s;
+    --animate-delay:10s;
+}
+.container-servicios{
+    margin-top: 6.25rem;
+    width: 99%;
+}
+.row{
+    padding: 20px;
 }

@@ -1,0 +1,8 @@
+.banner {
+    background-image: url("../../src/assets/shared/imagenes/BannerCuidadosDorados.jpg");
+    height: 500px;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}

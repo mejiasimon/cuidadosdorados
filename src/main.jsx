@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <Banner />
     <Servicios />
-    <Footer />
     <Agenda />
+    <Footer />
   </React.StrictMode>,
 )

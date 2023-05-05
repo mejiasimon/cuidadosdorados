@@ -1,5 +1,7 @@
 
-
+*{
+    font-family: 'Poppins', sans-serif;
+  }
 .container-nav{
     font-size: 62.5%;
 }
@@ -52,14 +54,11 @@ width: 6.25rem;
 }
 
 .navbar a{
+    padding: 10px;
     color: #444;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
-}
-
-.navbar a:hover{
-    color: #117964;
 }
 
 @media (max-width: 768px){
@@ -175,4 +174,13 @@ width: 6.25rem;
     .navbar-container input[type="checkbox"]:checked ~ .logo{
         display: none;
     }
+}
+li>a:hover{
+    color: #fff;
+    background: rgba(82, 81, 81, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    transition: 1s;
+
 }

@@ -1,3 +1,7 @@
+*{
+    font-family: 'Poppins', sans-serif;
+  }
+
 .banner {
     background-image: url("../../src/assets/shared/imagenes/BannerCuidadosDorados.jpg");
     height: 500px;

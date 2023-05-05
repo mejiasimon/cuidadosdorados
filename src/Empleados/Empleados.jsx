@@ -6,33 +6,32 @@ export function Empleados() {
 
     let empleados = [
         {
-            nombre: "Carlos Sanchez",
-            edad: 45,
+            nombre: "gustav petroverich",
             cargo: "CEO",
             foto: "https://i.imgur.com/RDlxwsW.jpeg"
         },
         {
-            nombre: "Federico Munera",
+            nombre: "duqverico",
             edad: 38,
             cargo: "CT0",
             foto: "https://i.imgur.com/060pTd6.jpeg"
 
         },
         {
-            nombre: "Rebeca Malagón",
+            nombre: "vero alcoericoc",
             edad: 56,
             cargo: "CFO",
             foto: "https://i.imgur.com/Nl8SwBp.jpeg"
 
         },
         {
-            nombre: "Maria Buitrago",
+            nombre: "Mari cabaloric",
             edad: 25,
             cargo: "VP",
             foto: "https://i.imgur.com/aFZffNT.png"
         },
         {
-            nombre: "Jimena Castro",
+            nombre: "palomoveric",
             edad: 37,
             cargo: "Consultora",
             foto: "https://i.imgur.com/ogtHhv7.jpeg"

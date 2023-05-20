@@ -5,7 +5,6 @@ export function Banner() {
     return (
         <>
             <div className="banner">
-                <Home></Home>
             </div>
         </>
     )

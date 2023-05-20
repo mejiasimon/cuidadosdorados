@@ -9,7 +9,7 @@ export function Menu(){
         },[])
 return(
     <>
-<div className="container-nav">
+<div className="container-nav fixed-top">
 <nav className="navbar">
   <div className="navbar-container container">
     <input type="checkbox" name id />

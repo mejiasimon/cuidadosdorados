@@ -11,9 +11,7 @@ export function Servicios() {
 wow.init()
     },[])
     return (
-        <>
-     
-        
+        <>    
  <div className="container-servicios">
  <center><h1>SERVICIOS</h1></center>
  <div className="row gx-1">

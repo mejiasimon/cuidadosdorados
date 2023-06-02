@@ -8,10 +8,11 @@ export function Home(){
 
     return(
         <>
-            <Banner />
-            <Servicios />
-            <Empleados />
-            <Agenda />
+        <Menu/>
+        <Banner />
+        <Servicios />
+        <Empleados />
+        <Agenda />
         </>
     )
 }

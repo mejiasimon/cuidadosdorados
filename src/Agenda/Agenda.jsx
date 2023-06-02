@@ -1,30 +1,47 @@
 import './Agenda.css'
 import {useEffect, useState} from "react";
 import Swal from "sweetalert2";
+import {enviar} from "../Services/enviar.js";
 export function Agenda() {
 
     const [nombre, setNombre] = useState(null);
     const [correo, setCorreo] = useState(null);
     const [telefono, setTelefono] = useState(null);
-    const [fecha, setFecha] = useState(null);
+    const [dia, setDia] = useState(null);
     const [hora, setHora] = useState(null);
     const [errores, setErrores] = useState({})
+    const [envioFormulario, setEnvioFormulario] = useState(false)
 
     useEffect(function () {
         if (Object.keys(errores).length > 0) {
             Swal.fire({
                 icon: 'error',
                 title: 'Que mal',
+                text : Object.values(errores),
                 confirmButtonText: 'Regresar'
             })
             return
         }
-        Swal.fire({
-            icon: 'success',
-            title: 'Tus datos han sido guardados',
-            confirmButtonText: 'Regresar'
-        })
-    }, [errores])
+
+        if (envioFormulario) {
+            let datos = {
+                nombre,
+                correo,
+                telefono,
+                hora,
+                dia,
+                tipo : 5
+            }
+            enviar(datos).then((respuesta) => {
+                console.log(respuesta)
+            })
+            Swal.fire({
+                icon: 'success',
+                title: 'Tus datos han sido guardados',
+                confirmButtonText: 'Regresar'
+            })
+        }
+    }, [errores, envioFormulario])
 
     function validarFormulario(evento) {
         evento.preventDefault()
@@ -42,7 +59,7 @@ export function Agenda() {
             listaDeErrores.telefono = "El telefono esta vacio"
         }
 
-        if (!fecha) {
+        if (!dia) {
             listaDeErrores.fecha = "La fecha está vacía"
         }
 
@@ -50,6 +67,9 @@ export function Agenda() {
             listaDeErrores.hora = "Selecciona una hora"
         }
         setErrores(listaDeErrores)
+        if (Object.keys(listaDeErrores).length === 0) {
+            setEnvioFormulario(true)
+        }
     }
 
 
@@ -98,7 +118,7 @@ export function Agenda() {
                     <i className="bi bi-calendar-date-fill"></i>
                     </span>
                     <input type="date" className={`form-control ${errores.fecha? "is-invalid" : ""}`} placeholder="Fecha Paciente" onChange={(evento) => {
-                        setFecha(evento.target.value)
+                        setDia(evento.target.value)
                     }} />
                 </div>
             </div>

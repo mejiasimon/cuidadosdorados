@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './Menu.css'
 import WOW from 'wow.js'
 import 'animate.css'
+import { Link } from 'react-router-dom'
 export function Menu(){
   const wow=new WOW(function(){
     wow.init()
@@ -20,7 +21,7 @@ export function Menu(){
       <li><a href="#">Servicios</a></li>
       <li><a href="#">Personal</a></li>
       <li><a href="#">Agendar Cita</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#"><Link to="/listar">VER RESERVAS</Link></a></li>
     </ul>
   </nav>
   <div className="section-center">

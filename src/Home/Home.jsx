@@ -9,7 +9,8 @@ export function Home(){
 
     return(
         <>
-    
+        <Menu/>
+        <Banner />
         <Servicios />
         <Empleados />
         <Agenda />
